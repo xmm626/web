@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p>姓名：{{name}}</p>
+			<input type="text" v-bind:value="description" />
+			<a v-bind:href="url">{{website}}</a>
+			<img :src="avatar">
+		</div>
+		<script type="text/javascript">
+			// 实例化一个VUE对象
+			var app = new Vue({
+				el: '#app',
+				data: {
+					name: '蒂姆·斯佩克特',
+					description: '饮食的迷思作者',
+					website: '豆瓣读书作者界面',
+					url: 'https://book.douban.com/subject/30437166/?icn=index-latestbook-subject',
+					avatar: 'https://img1.doubanio.com/view/subject/l/public/s30017698.jpg'
+				}
+			})
+		</script>
+	</body>
+</html>
